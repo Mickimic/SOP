@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOVACS EU SOP 详细操作指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4eaf5 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(90deg, #1a3a8f 0%, #2c5aa0 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            color: #555;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab:hover {
+            background: #f0f4ff;
+        }
+        
+        .tab.active {
+            color: #1a3a8f;
+            border-bottom: 3px solid #1a3a8f;
+            background: #f0f4ff;
+        }
+        
+        .content-section {
+            display: none;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        h2 {
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eaeaea;
+        }
+        
+        h3 {
+            color: #2c5aa0;
+            margin: 25px 0 15px;
+            padding-left: 10px;
+            border-left: 4px solid #2c5aa0;
+        }
+        
+        h4 {
+            color: #4a7bc8;
+            margin: 20px 0 10px;
+        }
+        
+        .step {
+            background: #f8faff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #4a7bc8;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #4a7bc8;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .note {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning {
+            background: #ffeaea;
+            border-left: 4px solid #f44336;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .info-box {
+            background: #e8f4fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        ul, ol {
+            margin: 10px 0 10px 25px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .contact-info {
+            background: #e8f5e9;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        
+        .resource-link {
+            display: inline-block;
+            background: #1a3a8f;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px 0;
+            transition: background 0.3s;
+        }
+        
+        .resource-link:hover {
+            background: #2c5aa0;
+        }
+        
+        .two-column {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                flex-direction: column;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ECOVACS EU SOP 详细操作指南</h1>
+            <p class="subtitle">售后、售前及特殊流程的详细执行步骤</p>
+            <p>本指南提供EU SOP文档中各项流程的具体操作说明和注意事项</p>
+        </header>
+        
+        <div class="nav-tabs">
+            <div class="tab active" data-tab="repair">送修流程</div>
+            <div class="tab" data-tab="return">退换货流程</div>
+            <div class="tab" data-tab="parts">配件流程</div>
+            <div class="tab" data-tab="pre-sales">售前流程</div>
+            <div class="tab" data-tab="special">特殊案例</div>
+        </div>
+        
+        <!-- 送修流程 -->
+        <div class="content-section active" id="repair">
+            <h2>送修流程详细操作指南</h2>
+            
+            <div class="two-column">
+                <div class="column">
+                    <h3>保修期内维修 - 经销商流程</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>确认机器所在地，收集送修信息</strong>
+                        <ul>
+                            <li>确认对方是经销商还是终端客户</li>
+                            <li>如果机器在经销商处，收集以下信息：
+                                <ul>
+                                    <li>经销商地址（收货地址和寄货地址）</li>
+                                    <li>联系电话</li>
+                                    <li>POP（发票作为附件）</li>
+                                    <li>SN（检查是否可以查到，E开头20个字符）</li>
+                                    <li>机器型号（与发票一致）</li>
+                                    <li>故障描述（精简）</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>信息收集完毕，发POST</strong>
+                        <ul>
+                            <li>在Salesforce内更新case的Issue Type、EMEA Model No.、Serial Number、Purchasing Channel、Contact Name</li>
+                            <li>使用对应语种发post，包含以下信息：
+                                <ul>
+                                    <li>简短总结：注明保修期内维修申请</li>
+                                    <li>姓名、邮箱、电话、地址</li>
+                                    <li>POP：发票作为附件</li>
+                                    <li>SN、机器型号</li>
+                                    <li>GOAT送修要PIN码</li>
+                                    <li>故障描述：精简总结</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>修改subject</strong>
+                        <ul>
+                            <li>如果case内有经销商系统的维修工单号，填在subject内</li>
+                            <li>在subject中填入指定关键词之一：
+                                <ul>
+                                    <li>CASE CREATION, REPAIR STATUS, SWAP, SPARE PARTS等</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="note">
+                        <strong>注意：</strong>官方合作的经销商无需进行故障排查，直接跟进流程即可。
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h3>保修期内维修 - 终端客户流程</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>排障（必要流程，不可跳过）</strong>
+                        <ul>
+                            <li>按照标准排障流程进行故障排查</li>
+                            <li>记录排障过程和结果</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>保修条件判断</strong>
+                        <ul>
+                            <li>判断是否为二手机器</li>
+                            <li>机器是否跨地区（无全球联保）</li>
+                            <li>确认故障属于机器故障（非配件损坏等）</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>收集信息，发POST</strong>
+                        <ul>
+                            <li>回复时告知客户"符合保修条件的维修我们这边会提供免费的运输标签"</li>
+                            <li>在Salesforce内更新case信息</li>
+                            <li>使用local对应地区的语种发post，包含：
+                                <ul>
+                                    <li>简短总结：注明保修期内维修申请</li>
+                                    <li>姓名、邮箱、电话、地址</li>
+                                    <li>POP：发票作为附件</li>
+                                    <li>机器型号、购买日期、SN</li>
+                                    <li>GOAT送修要PIN码</li>
+                                    <li>故障描述和已做排障：精简总结</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>根据地区进行相应操作</strong>
+                        <ul>
+                            <li>德国DE和瑞士CH：change owner给Petoofi，填写维修case登记表</li>
+                            <li>其他地区：转给相对应的local agent</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning">
+                        <strong>重要：</strong>不是机器故障的情况不予送修，例如割草机无法识别衣物或其他障碍物不是机器故障。
+                    </div>
+                </div>
+            </div>
+            
+            <h3>超过保修期维修</h3>
+            
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>延保服务操作</strong>
+                <ul>
+                    <li>Agent有10天延保权限：拒绝客户 → 根据情况决定是否延保 → 收集信息发POST → 后续操作参考保内送修</li>
+                    <li>Team Leader有30天延保权限：拒绝客户 → 收集信息发POST → 飞书发给TL申请延保 → 后续操作参考保内送修</li>
+                    <li>超过30天的延保申请：拒绝客户 → 收集信息发POST → 升级给Pia → 按反馈操作</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">2</span>
+                <strong>付费维修操作</strong>
+                <ul>
+                    <li>告知客户：过保修期只能提供付费维修，运费由顾客承担</li>
+                    <li>收集信息发POST（类似保内流程，但需注明是保修期外维修）</li>
+                    <li>根据地区转给对应负责人：
+                        <ul>
+                            <li>瑞士地区：按保内流程进行</li>
+                            <li>其他地区：转给对应local agent</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 退换货流程 -->
+        <div class="content-section" id="return">
+            <h2>退换货流程详细操作指南</h2>
+            
+            <div class="two-column">
+                <div class="column">
+                    <h3>DTC退换货流程</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>DOA期判断</strong>
+                        <ul>
+                            <li>DTC DOA期为30天</li>
+                            <li>客户情绪波动较大可放宽至45天，但超过30天需先转DTC确认</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>质量问题退货/换货</strong>
+                        <ul>
+                            <li>先排障，若客户拒绝排障进入下一步</li>
+                            <li>检查包裹是否拆封：
+                                <ul>
+                                    <li>未拆封：发post转DTC，由DTC创建标签</li>
+                                    <li>已拆封：agent创建标签，告知客户寄出后发post转DTC</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>个人主观原因退货/换货</strong>
+                        <ul>
+                            <li>首先进行挽留，建议客户保留机器并提供5%退款</li>
+                            <li>若客户同意：发internal post转DTC办理退款</li>
+                            <li>若客户不同意：
+                                <ul>
+                                    <li>未拆封：转DTC并注明情况</li>
+                                    <li>已拆封：agent创建Label，客户寄出后发post转DTC</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>忘记使用积分/优惠券</strong>
+                        <ul>
+                            <li>核查积分或优惠券抵扣金额是否低于订单金额10%</li>
+                            <li>若低于10%：agent可直接申请差价退款，转DTC执行</li>
+                            <li>若高于或等于10%：转DTC团队核查</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="note">
+                        <strong>注意：</strong>所有超出SOP限定时间的申请必须有拒绝记录，不要虚假承诺。
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h3>亚马逊退换货流程</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>判断是否官方店铺</strong>
+                        <ul>
+                            <li>检查发票销售商是否为ECOVACS Europe GmbH</li>
+                            <li>若是官方店铺：由sellerteam按常规流程处理</li>
+                            <li>若非官方店铺：建议客户联系亚马逊官方处理</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>正常退换货流程</strong>
+                        <ul>
+                            <li>判断购买日期是否超过30天</li>
+                            <li>未超过30天：联系GS团队(sellerteam@ecovacs.com)</li>
+                            <li>超过30天：抱歉+拒绝，特殊情况可询问</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>UK地区DTC订单退换货</strong>
+                        <ul>
+                            <li>主观退货：确认商品是否已拆封，是否接受"退差5%保留商品"方案</li>
+                            <li>质量问题：优先提供故障排除方案，无效时转DTC申请退货标签</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>经销商退换货流程</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>DOA期判断</strong>
+                        <ul>
+                            <li>官方合作经销商DOA期为14天</li>
+                            <li>Boulanger DOA期为15天</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>处理流程</strong>
+                        <ul>
+                            <li>如果对方是终端客户：让客户联系经销商申请退换货</li>
+                            <li>如果对方是经销商：确认为官方授权经销商且未超DOA，转给local agent</li>
+                            <li>非官方经销商：无DOA，只能送修</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning">
+                        <strong>重要：</strong>经销商要求信用凭证必须直接与DR联系，经销商和分销商应直接联系DR。
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 配件流程 -->
+        <div class="content-section" id="parts">
+            <h2>配件流程详细操作指南</h2>
+            
+            <div class="two-column">
+                <div class="column">
+                    <h3>申请配件流程</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>信息收集与POST</strong>
+                        <ul>
+                            <li>确认信息收集完毕后更新case的Issue Type、EMEA Model No.、Serial Number等</li>
+                            <li>使用英语发post，包含：
+                                <ul>
+                                    <li>简短总结：注明配件申请原因</li>
+                                    <li>姓名、邮箱、电话、地址</li>
+                                    <li>POP：发票作为附件</li>
+                                    <li>机器型号、购买日期、SN</li>
+                                </ul>
+                            </li>
+                            <li>申请配件升级给Petoofi</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>适用情况</strong>
+                        <ul>
+                            <li>情况一：经销商/DTC/亚马逊DOA期内申请配件（漏发或损坏）</li>
+                            <li>情况二：维修后配件丢失/损坏</li>
+                            <li>情况三：经销商Boulanger申请配件（无法提供发票）</li>
+                            <li>情况四~九：特定型号配件问题（如Goat RTK error 656等）</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="note">
+                        <strong>注意：</strong>请务必分清"经销商申请配件"和"经销商订购配件"的区别，不要@order@ecovacs.com。
+                    </div>
+                    
+                    <h3>购买配件流程</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>适用情况</strong>
+                        <ul>
+                            <li>经销商要购买配件</li>
+                            <li>客户需要配件，但不属于免费申请情况</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>操作流程</strong>
+                        <ul>
+                            <li>对于存在多种型号的备件，先核实所需的具体型号</li>
+                            <li>如果Krempl有该配件产品，提供Krempl链接</li>
+                            <li>提供Krempl链接时进行必要说明：Krempl不是官网购买渠道，我们不负责Krempl的售后</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h3>常见配件问题处理</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>Goat A系列 RTK error 656</strong>
+                        <ul>
+                            <li>问题：RTK参考站无法与Goat连接，显示错误代码E656</li>
+                            <li>Issue Type要标RTK</li>
+                            <li>SKU：201-2337-0000</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>Goat A&O系列 RTK问题</strong>
+                        <ul>
+                            <li>注意RTK有两个不同版本，必须匹配</li>
+                            <li>RTK参考站二维码以"00000"开头 - SKU：201-2337-1243</li>
+                            <li>RTK参考站二维码以"C"开头 - SKU：201-2452-0021</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>T30 OMNI/T30 PRO OMNI 抹布盘</strong>
+                        <ul>
+                            <li>问题：在拖地/清洁过程中，随着抹布盘的旋转，DEEBOT滴水</li>
+                            <li>操作：在保修期内给客户发新版本抹布盘</li>
+                            <li>SKU: 201-2310-4301（只需要申请1件，包括2个拖把板+2个拖把垫）</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>X5 OMNI 可拆卸底座</strong>
+                        <ul>
+                            <li>问题：X5 OMNI无法回收清洁槽中的所有脏水</li>
+                            <li>操作：在保修期内向客户发送新版可拆卸底座</li>
+                            <li>SKU：201-2435-0104</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <strong>T20 抹布支架立柱颜色判定</strong>
+                        <ul>
+                            <li>灰色立柱：为新物料号对应的立柱颜色，无质量问题</li>
+                            <li>白色立柱：若白色立柱的母头无磨损情况，需要补寄抹布支架</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">6</span>
+                        <strong>T30抹布支架掉落</strong>
+                        <ul>
+                            <li>排障：检查磁铁是否掉入机器卡槽内，或吸附在另一侧支架上</li>
+                            <li>若用户能自行取出磁铁，指导用户取出后补寄支架</li>
+                            <li>注：当用户丢失一个磁铁或支架时，不要直接补寄一对支架</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 售前流程 -->
+        <div class="content-section" id="pre-sales">
+            <h2>售前流程详细操作指南</h2>
+            
+            <div class="two-column">
+                <div class="column">
+                    <h3>DTC售前流程</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>取消订单</strong>
+                        <ul>
+                            <li>先去官网后台web5.0查看订单是否已经发送</li>
+                            <li>如果未发送：按照格式"pls cancel FR(DE/IT) #order number in case #case number"发送给Kristen</li>
+                            <li>如果Kristen回复订单已取消：发post，状态改成escalated，转给DTC处理退款</li>
+                            <li>如果订单已发送：让客户拒收，待客户拒收后发post转至DTC</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>更改订单地址</strong>
+                        <ul>
+                            <li>按照模板发给Kristen（订单未发货）</li>
+                            <li>模板："pls change the billing (delivery) address of IT(DE/FR)#order number in case #case number to below:"</li>
+                            <li>提供新地址信息，如果差别不大需标出修改的地方</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>发票相关</strong>
+                        <ul>
+                            <li>需要发票：上web5.0找到invoice，下载pdf发送给客户</li>
+                            <li>更改发票信息：询问客户需要更改的正确信息，发internal post转DTC</li>
+                            <li>增值税发票：DTC无法开具增值税发票，对企业说明不能开具，对客户提供正常发票</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h3>亚马逊售前流程</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>注意事项</strong>
+                        <ul>
+                            <li>必须先查看历史记录，符合merge条件一定要merge</li>
+                            <li>进入historical case或Account查看是否有符合条件的Case</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>判断是否官方店铺</strong>
+                        <ul>
+                            <li>销售商为ECOVACS Europe GmbH：亚马逊官方店铺</li>
+                            <li>销售商为其他亚马逊店铺（如Amazon EU S.à r.l.）：非官方店铺</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>售前问题处理</strong>
+                        <ul>
+                            <li>收集信息</li>
+                            <li>创建related cases联系GS团队</li>
+                            <li>GS团队长时间没回复：先检查case信息是否有误，后上报给TL跟进</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>经销商售前流程</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>注意事项</strong>
+                        <ul>
+                            <li>对经销商用语要专业，不要使用对客户的模板</li>
+                            <li>不要盲目merge经销商的case，确认两个case是同一事项，同一机器</li>
+                            <li>发送经销商的邮件发不出去：检查正确邮箱地址，通过related case处理</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>订购配件</strong>
+                        <ul>
+                            <li>经销商订购配件需先引导其联系Krempl（如果Krempl有该产品）</li>
+                            <li>经销商Boulanger不能直接从我们这里购买配件，需联系中央仓库</li>
+                            <li>配件推荐注意事项：核实经销商所需的具体型号</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>订购整机</strong>
+                        <ul>
+                            <li>经销商希望购买产品，询问运费和预计交货时间</li>
+                            <li>操作：发送邮件时将order@ecovacs.com抄送（CC）</li>
+                            <li>在邮件内容中告诉经销商，订单需要发送至order@ecovacs.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 特殊案例 -->
+        <div class="content-section" id="special">
+            <h2>特殊案例处理指南</h2>
+            
+            <div class="two-column">
+                <div class="column">
+                    <h3>邮件问题处理</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>邮件无法发送成功</strong>
+                        <ul>
+                            <li>步骤一：检查地区和语言是否对应邮件地区，没有则修改</li>
+                            <li>步骤二：查看内容，若显示邮件会在特定时间回来，手动设置为pending状态</li>
+                            <li>如果是域名无法发送，检查发送邮箱是否正确</li>
+                            <li>注：邮件投递系统提示"邮件无法投递"可能是客户邮箱设置的自动回复</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>邮件发送异常（WeTransfer）</strong>
+                        <ul>
+                            <li>邮件及附件检查：查看所有附件内容</li>
+                            <li>查找原Case：通过内容识别原case，在原case下发post</li>
+                            <li>无原case时的处理：创建related case跟进客户诉求</li>
+                            <li>注意事项：可以尝试重发邮件，但不要持续发</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>安全隐患处理</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>设备冒烟或发出烧焦味</strong>
+                        <ul>
+                            <li>步骤一：收集信息
+                                <ul>
+                                    <li>基础信息：按照送修标准收集机器信息和客户信息</li>
+                                    <li>图片资料：设备、充电座和尘盒部件的各个完整清晰的细节照片</li>
+                                </ul>
+                            </li>
+                            <li>步骤二：指导客户立即停止使用设备，存放在安全地点</li>
+                            <li>步骤三：收到照片后，整理信息发post，escalate to Pia</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>数据隐私处理</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>客户要求删除账户</strong>
+                        <ul>
+                            <li>让客户联系data-privacy@ecovacs.com提出请求</li>
+                            <li>如果客户已联系data-privacy@ecovacs.com，需直接联系该邮箱获取信息</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>客户要求获取GDPR记录</strong>
+                        <ul>
+                            <li>立即告知最终用户联系data-privacy@ecovacs.com</li>
+                            <li>这种情况的case需要优先处理</li>
+                            <li>如果需要升级，优先级选high，飞书告知Petoofi或Pia需要优先处理</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h3>法律与索赔处理</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>判定标准</strong>
+                        <ul>
+                            <li>有损害事实发生，缺陷与损害之间存在因果关系</li>
+                            <li>产品须留在客户处，且不得申请维修</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>赔偿案例（以地板为例）</strong>
+                        <ul>
+                            <li>全屋地板维修赔偿：需证明整个地板损坏由DEEBOT导致</li>
+                            <li>局部损坏赔偿：需提供针对受损部位的专项证明</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>其他特殊案例</h3>
+                    
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>维修中心转文件缺失参考编号</strong>
+                        <ul>
+                            <li>Sébastien Luc是Cordon法国维修中心主管，收到他的邮件不要当作客户处理</li>
+                            <li>将该案例转交给local agent处理</li>
+                            <li>通常情况下分配给Edwige Mbounge</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>收到DR邮件：维修不了</strong>
+                        <ul>
+                            <li>Case A：DR发消息说维修不了</li>
+                            <li>Case B：客户查询维修进度（同一个机器）</li>
+                            <li>操作：A agent在case B下发POST，并且飞书告知B agent，由B agent回复客户</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>MediaMarkt自动邮件催促</strong>
+                        <ul>
+                            <li>经销商MediaMarkt通过自动生成邮件催促维修进度</li>
+                            <li>操作：发post总结，escalate to Pia</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>FNAC DARTY要求开具信用凭证</strong>
+                        <ul>
+                            <li>操作：让对方自行联系dr@ecovacs.com</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <strong>客户要求电话沟通</strong>
+                        <ul>
+                            <li>优先提供ECOVACS的售后电话，让客户自己打热线</li>
+                            <li>意大利地区特殊情况：发post升级给Pia，让Mehmet安排电话</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>ECOVACS EU SOP 详细操作指南 | 最后更新: 2025年</p>
+            <p>本指南基于EU SOP文档创建，具体操作请以最新版SOP为准</p>
+        </footer>
+    </div>
+
+    <script>
+        // 选项卡切换功能
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // 移除所有active类
+                document.querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // 添加active类到当前选项卡和内容区域
+                this.classList.add('active');
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // 添加一些交互效果
+        document.querySelectorAll('.step').forEach(step => {
+            step.addEventListener('click', function() {
+                this.style.transform = 'scale(1.02)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
